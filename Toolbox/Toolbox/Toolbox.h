@@ -10,6 +10,6 @@
 
 @interface Toolbox : NSObject
 
-@property (nonatomic) NSArray *tools;
+@property (nonatomic) NSArray * _Nullable tools;
 
 @end
