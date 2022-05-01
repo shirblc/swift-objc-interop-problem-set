@@ -10,8 +10,8 @@
 
 @interface Apartment : NSObject
 
-@property (nonatomic) NSArray *animals;
+@property (nonatomic) NSArray * _Nonnull animals;
 
--(instancetype)initWithAnimals:(NSArray*)animals;
+-(instancetype _Nonnull)initWithAnimals:(NSArray* _Nonnull)animals;
 
 @end
