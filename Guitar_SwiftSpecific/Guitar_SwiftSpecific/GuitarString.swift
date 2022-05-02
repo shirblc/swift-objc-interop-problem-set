@@ -9,7 +9,7 @@
 import Cocoa
 
 
-enum Error: ErrorType {
+enum GuitarError: Error {
     case Broken
     case OutOfTune
 }
@@ -22,12 +22,12 @@ struct GuitarString {
     mutating func pluck(velocity: Float) throws {
         if broken {
             // can't play a broken string
-            throw Error.Broken
+            throw GuitarError.Broken
         }
         
         if outOfTune {
             // you can still play an out of tune string, this is just to illustrate another error type
-            throw Error.OutOfTune
+            throw GuitarError.OutOfTune
         }
         
         // We're playing the string really hard.
@@ -40,7 +40,7 @@ struct GuitarString {
             if arc4random() % 2 == 1 {
                 // We broke the string! This sounds bad when it happens, so throw an error right away.
                 broken = true
-                throw Error.Broken
+                throw GuitarError.Broken
             }
         }
         

@@ -15,12 +15,12 @@ class Guitarist: NSObject {
     func perform(notes: [Note]) {
         for note in notes {
             do {
-                try guitar.playNote(note)
+                try guitar.playNote(note: note)
                 
-            } catch Error.Broken {
+            } catch GuitarError.Broken {
                 print("Quick, replace the string!")
                 break
-            } catch Error.OutOfTune {
+            } catch GuitarError.OutOfTune {
                 print("Uh oh! Tuning break.")
                 break
             } catch {

@@ -24,13 +24,13 @@ class Guitar {
     }
     
     func playNote(note: Note) throws {
-        var string = stringForNote(note)
-        try pluckString(&string, velocity: note.velocity)
+        var string = stringForNote(note: note)
+        try pluckString(string: &string, velocity: note.velocity)
     }
     
-    func pluckString(inout string: GuitarString, velocity: Float) throws {
+    func pluckString( string: inout GuitarString, velocity: Float) throws {
         // Pluck the note 
-        try string.pluck(velocity)
+        try string.pluck(velocity: velocity)
     }
 }
 
