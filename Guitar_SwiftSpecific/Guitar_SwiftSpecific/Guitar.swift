@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Guitar {
+@objc class Guitar: NSObject {
     let frets: [Fret]
     let strings: [GuitarString]
     
