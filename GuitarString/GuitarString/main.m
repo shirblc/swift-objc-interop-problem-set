@@ -18,6 +18,15 @@ int main(int argc, const char * argv[]) {
         // If there was an error, log it
         if(error) {
             NSLog(@"%@", error.localizedDescription);
+            
+            switch(error.code) {
+                case GuitarStringErrorBroken:
+                    NSLog(@"Guitar string is broken!");
+                    break;
+                case GuitarStringErrorOutOfTune:
+                    NSLog(@"Guitar string is out of tune!");
+                    break;
+            }
         }
     }
     return 0;
