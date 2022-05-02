@@ -12,7 +12,7 @@ import Cocoa
     case Rock, Paper, Scissors, Invalid
 }
 
-class RPSTurn: NSObject {
+@objcMembers class RPSTurn: NSObject {
     
     var move: Move
     
