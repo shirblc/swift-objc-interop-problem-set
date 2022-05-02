@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RPSGame.h"
 
 @interface RPSController : NSObject
 
 @property (nonatomic) RPSGame *game;
 
--(void)throwDown:(Move) playersMove;
+-(void)throwDown:(int) playersMove;
 -(NSString*)messageForGame:(RPSGame*)game;
 @end
 
