@@ -14,7 +14,7 @@ import Cocoa
     case OutOfTune
 }
 
-@objc class GuitarString: NSObject {
+@objcMembers class GuitarString: NSObject {
     
     var broken: Bool = false
     var outOfTune: Bool = false
