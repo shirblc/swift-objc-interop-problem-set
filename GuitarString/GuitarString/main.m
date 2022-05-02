@@ -11,13 +11,14 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        NSError *error;
+        GuitarString *myString = [[GuitarString alloc] init];
+        [myString pluckWithVelocity:1 error:&error];
         
-        // a. Create an instance of the class GuitarString
-        // b. Create an NSError
-        // c. Call the method pluck(velocity: Float)
-        // d. Check if an error was returned
-        // e. Log an error if one was returned
-
+        // If there was an error, log it
+        if(error) {
+            NSLog(@"%@", error.localizedDescription);
+        }
     }
     return 0;
 }
